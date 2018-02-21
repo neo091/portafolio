@@ -32,7 +32,7 @@ export class InformacionService {
   public carga_sobre_nosotros(){
     this.http.get("https://appportafolios.firebaseio.com/equipo.json")
     .subscribe(data=>{
-        console.log(data.json());
+        //console.log(data.json());
         this.carga_sobre_nosotros_is = true;
         this.equipo = data.json();
       })
