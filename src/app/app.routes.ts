@@ -9,6 +9,7 @@ import {
 
 const app_routes: Routes = [
   { path: '', component: PortafoliosComponent },
+  { path: 'home', component: PortafoliosComponent },
   { path: 'about', component: AboutComponent },
   { path: 'producto', component: ProductoComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
