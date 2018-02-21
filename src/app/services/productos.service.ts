@@ -11,8 +11,11 @@ export class ProductosService {
   constructor( private http:Http ) {
 
     this.cargar_productos();
+  }
 
+  public cargar_producto( id:string ){
 
+    return this.http.get("https://appportafolios.firebaseio.com/productos/"+ id +".json");
   }
 
   public cargar_productos(){
@@ -20,9 +23,12 @@ export class ProductosService {
 
     this.http.get("https://appportafolios.firebaseio.com/productos_idx.json")
     .subscribe( res=>{
-      this.cargando = true;
-      this.productos = res.json();
-      console.log(res.json());
+
+      //console.log(res.json());
+
+        this.productos = res.json();
+
+        this.cargando = false;
     })
 
   }

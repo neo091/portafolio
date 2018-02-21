@@ -22,3 +22,16 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
+
+/*
+Svg
+*/
+
+/*
+  Color del Loading
+*/
+svg path,
+svg rect{
+  fill: black;
+}
