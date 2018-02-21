@@ -21,6 +21,7 @@ export class ProductosService {
     this.http.get("https://appportafolios.firebaseio.com/productos_idx.json")
     .subscribe( res=>{
       this.cargando = true;
+      this.productos = res.json();
       console.log(res.json());
     })
 
